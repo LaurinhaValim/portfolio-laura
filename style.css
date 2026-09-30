@@ -1,0 +1,406 @@
+:root {
+    --bg: #f7f7fb;
+    --surface: #ffffff;
+    --surface2: #f0f1f6;
+    --text: #171923;
+    --muted: #606575;
+    --line: #e4e6ed;
+    --accent: #7c3aed;
+    --accent2: #5b21b6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.root {
+    min-height: 100vh;
+}
+
+.container {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+}
+
+
+.nav {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.hero-header {
+    text-align: center;
+    padding: 90px 20px 70px;
+}
+
+.hero-header h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    color: var(--text);
+}
+
+.hero-header p {
+    margin: 18px 0 40px;
+    font-size: 1.15rem;
+    color: var(--muted);
+    letter-spacing: 0.3px;
+}
+
+.hero-header .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.hero-header .links a {
+    position: relative;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.hero-header .links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.25s ease;
+}
+
+.hero-header .links a:hover {
+    color: var(--accent);
+}
+
+.hero-header .links a:hover::after {
+    width: 100%;
+}
+
+
+
+.hero {
+    padding: 40px 0 50px;
+}
+
+#sobre {
+    padding: 0;
+    max-width: 850px;
+}
+
+#sobre h2 {
+    margin: 0 0 25px;
+    font-size: 2.2rem;
+    color: var(--text);
+}
+
+#sobre p {
+    margin: 0 0 18px;
+    font-size: 1.05rem;
+    color: var(--muted);
+}
+
+
+#formacao {
+    width: min(1080px, 92%);
+    margin: 0 auto;
+    padding: 35px 0 70px;
+}
+
+#formacao h3 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+}
+
+#formacao p {
+    margin: 0;
+    color: var(--muted);
+}
+
+
+section {
+    padding: 70px 0;
+}
+
+.sectionhead {
+    margin-bottom: 35px;
+}
+
+.kicker {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sectionhead h2 {
+    margin: 8px 0;
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+}
+
+.sectionhead p {
+    max-width: 650px;
+    color: var(--muted);
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.project {
+    transition: 0.2s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.project .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 13px;
+    background: var(--surface2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.project h3 {
+    margin: 15px 0 8px;
+    font-size: 1.3rem;
+}
+
+.project p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--accent2);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.tag {
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--line);
+    font-size: 0.8rem;
+}
+
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.skill {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.2s;
+}
+
+.skill:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.skill strong {
+    font-size: 1rem;
+}
+
+
+
+.contact {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 25px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.contact h2 {
+    margin: 0 0 8px;
+    font-size: 2rem;
+}
+
+.contact p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 11px 17px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+
+.btn.primary:hover {
+    background: var(--accent2);
+}
+
+
+
+footer {
+    margin-top: 40px;
+    padding: 35px 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+
+@media (max-width: 800px) {
+
+    .hero-header {
+        padding: 70px 20px 55px;
+    }
+
+    .hero-header h1 {
+        font-size: clamp(2.2rem, 9vw, 3.5rem);
+        letter-spacing: -1.5px;
+    }
+
+    .hero-header p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-header .links {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .hero-header {
+        padding: 55px 15px 45px;
+    }
+
+    .hero-header h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-header p {
+        font-size: 0.95rem;
+    }
+
+    .hero-header .links {
+        gap: 15px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    #sobre h2 {
+        font-size: 1.8rem;
+    }
+
+    .sectionhead h2 {
+        font-size: 1.8rem;
+    }
+
+    .contact {
+        padding: 25px;
+    }
+
+    .contact h2 {
+        font-size: 1.6rem;
+    }
+}
